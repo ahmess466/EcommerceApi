@@ -23,7 +23,7 @@ Route::group([
     Route::post('/refresh', [AuthController::class, 'refresh'])->middleware('auth:api')->name('refresh');
     Route::post('/me', [AuthController::class, 'me'])->middleware('auth:api')->name('me');
 });
-//Brand Crud
+//Brand Crud Operaation
 Route::group(['prefix'=>'brands'],function($router){
 Route::controller(BrandController::class)->group(function(){
     Route::get('/index', 'index')->middleware('is_admin');
